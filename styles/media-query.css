@@ -1,0 +1,140 @@
+
+/* =========================================================
+ * Media Query Styles
+ * ========================================================= */
+
+@media only screen 
+and (min-width : 720px) {
+	.makeSpaceForFilter {
+		width: calc(100% - 300px) !important;
+	}
+}
+
+/* Tablets (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 720px) {
+	#menu, #menu a {
+		visibility: visible;
+		display: inline-block;
+	}
+
+	.mobile {
+		display: initial;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	header .searchbox {
+		width: 50px;
+		margin: 0;
+		padding: 0;
+		margin-right: 15px;
+		cursor: pointer;
+		height: 100%;
+		-moz-transition: 	all .28s cubic-bezier(.4,0,.2,1);
+		-webkit-transition: all .28s cubic-bezier(.4,0,.2,1);
+		transition: 		all .28s cubic-bezier(.4,0,.2,1);
+		position: absolute;
+		right: 0;
+		background-color: rgba(255,255,255,0);
+	}
+
+
+	header .searchbox.active {
+		width: 100%;
+		margin: 0;
+		background-color: white;
+		background-image: url('../images/icons/back_dark.svg');
+		background-size: 24px 24px;
+		background-repeat: no-repeat;
+		background-position: 14px 50%;
+	}
+
+	.searchbox input {
+		opacity: 0;
+	}
+
+	.searchbox.active input {
+		opacity: 1;
+		margin-left: 60px;
+		height: 31px;
+		margin-top: 17px;
+		width: 80%;
+		width: calc(100% - 80px);
+		border-bottom: 2px solid #2cc3f3;
+	}
+
+	.searchicon {
+		position: absolute;
+		background: rgba(0,0,0,0);
+		width: 60px;
+		height: 64px;
+		cursor: pointer;
+		z-index: 9999999;
+	}
+
+	.filterBtn span {
+		display: none;
+	}
+
+	#vancouverMap .btn-next {
+		position: fixed;
+		right: 30px;
+		left: initial;
+		bottom: 30px;
+	}
+
+	#vancouverMap .btn-next:after {
+		background-position: center;
+		-webkit-background-position: center;
+	}
+
+	#vancouverMap .btn-next.mapIcon:after {
+		background-position: bottom;
+		-webkit-background-position: bottom;
+	}
+
+	#filter-panel {
+		width: 100%;
+		height: 500px;
+		margin-right: 0;
+		top: -500px
+	}
+
+	#filter-panel.open {
+		top: 0;
+	}
+
+	.beerData {
+		width: 60px;
+	}
+
+	.card {
+		width: 100%;
+		padding-top: 60%;
+	}
+
+	.beerData {
+		display: none;
+	}
+
+	#splash {
+		z-index: -5;
+		display: none;
+		visibility: hidden;
+	}
+
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (max-width : 480px) {
+	#menu, #menu a {
+		visibility: visible;
+		display: inline-block;
+	}
+}

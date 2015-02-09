@@ -1,0 +1,108 @@
+<script src="scripts/logic.js"></script>
+<script src="scripts/menu.js"></script>
+
+<div data-ng-init="init()">
+
+	<style>
+
+		body {
+			background: {{brewery.color}};
+		}
+	</style>
+
+	<header class="detail-view tabbed">
+		<a ng-click="$back()">
+			<svg id="arrow-icon" class="nav_icon stay" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+				<g id="ic_x5F_search_x0D_"></g>
+				<polygon fill="#000000" points="12,20 13.4,18.6 7.8,13 20,13 20,11 7.8,11 13.4,5.4 12,4 4,12 "/>
+			</svg>
+		</a>
+		<div class="detail-hero" style="
+				background: url('../images/breweries/{{brewery.id}}.jpg');
+				background-size: cover;
+				background-position: center;
+		"></div>
+		<div class="shadow"></div>
+		<img src="images/logos/{{brewery.id}}.png" class="detail-img">
+		<div class="detail-title">
+			<span>{{brewery.name}}</span>
+			<div class="container2">
+				<ul class="nav nav-tabs twotabs">
+					<li class="active"><a href="#tab1" data-toggle="tab">Info</a></li>
+					<li><a href="#tab2" data-toggle="tab">Beers</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div id="detailContent">
+
+		<div class="container">
+
+			<div class="tab-content">
+
+				<div class="tab-pane active" id="tab1">
+					<img src="images/icons/map_dark.svg" class="info-icon">
+					<div class="after-icon">
+						<p>{{brewery.address}}</p>
+					</div>
+					<img src="images/icons/phone_dark.svg" class="info-icon">
+					<div class="after-icon">
+						<p>{{brewery.phone}}</p>
+					</div>
+					<img src="images/icons/website_dark.svg" class="info-icon">
+					<div class="after-icon">
+						<p>{{brewery.website}}</p>
+					</div>
+					<img src="images/icons/clock_dark.svg" class="info-icon">
+					<div class="after-icon">
+						<p>{{brewery.hours}}</p>
+					</div>
+					<span class="line"></span>
+					<h2>About</h2>
+					<p>{{brewery.description}}</p>
+					<span class="line"></span>
+					<h2>Growler Fill</h2>
+					<h1>{{brewery.growlerprice}}</h1>
+				</div>
+
+				<div class="tab-pane" id="tab2">
+					<p> Order: 
+						<select ng-model="orderProp">
+							<option value="name">Alphabetical</option>
+							<option value="-alcohol">Highest Alcohol%</option>
+							<option value="alcohol">Lowest Alcohol%</option>
+							<option value="-bitterness">Most Bitter</option>
+							<option value="bitterness">Least Bitter</option>
+						</select>
+					</p>
+					<span class="line"></span>		
+					<div class="card2" ng-repeat="beer in beers | filter:thisBrewery | orderBy:orderProp">
+						<a href="#/beers/{{beer.id}}">
+							<div class="beerListInfo col-xs-12">
+								<img src="images/beers/{{beer.icon}}.svg" class="beer-icon">
+								<div class="beerTitle">
+									<h3>{{beer.name}}</h3>
+									<p>{{beer.brewery}}</p>
+								</div>
+								<div class="right">
+									<div class="beerData">
+										<h3>{{beer.alcohol}}%</h3>
+										<p>ABV</p>
+									</div>
+									<div class="beerData">
+										<h3>{{beer.bitterness}}</h3>
+										<p>IBU</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>

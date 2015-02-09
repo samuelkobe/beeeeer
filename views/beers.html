@@ -1,0 +1,60 @@
+
+<script src="scripts/horizontal-scrolling.js"></script>
+<script src="scripts/logic.js"></script>
+<script src="scripts/menu.js"></script>
+
+<header class="main">
+	<button class="menuBtn">
+		<img src="images/icons/menu_dark.svg" class="nav_icon mobile">
+	</button>
+	<div class="navTitleMobile mobile">
+		<span>Beers</span>
+	</div>
+	<div class="navDesktop desktop">
+		<div class="logo"></div>
+		<a href="#/breweries">Breweries</a>
+		<a href="#/beers" class="selected">Beers</a>
+	</div>
+
+	<div id="search" class="searchbox">
+		<span class="searchicon"></span>
+		<input ng-model="query" class="unstyled" id="search-input" placeholder="Search">
+	</div>
+
+</header>
+
+<section id="beerResults" class="pushBelowHeader">
+	<div class="container">
+		<p> Order: 
+			<select ng-model="orderProp">
+				<option value="name">Alphabetical</option>
+				<option value="-alcohol">Highest Alcohol%</option>
+				<option value="alcohol">Lowest Alcohol%</option>
+				<option value="-bitterness">Most Bitter</option>
+				<option value="bitterness">Least Bitter</option>
+			</select>
+		</p>
+		<span class="line"></span>
+		<div class="card2" ng-repeat="beer in beers | filter:query | orderBy:orderProp">
+			<a href="#/beers/{{beer.id}}">
+				<div class="beerListInfo col-xs-12">
+					<img src="images/beers/{{beer.icon}}.svg" class="beer-icon">
+					<div class="beerTitle">
+						<h3>{{beer.name}}</h3>
+						<p>{{beer.brewery}}</p>
+					</div>
+					<div class="right">
+						<div class="beerData">
+							<h3>{{beer.alcohol}}%</h3>
+							<p>ABV</p>
+						</div>
+						<div class="beerData">
+							<h3>{{beer.bitterness}}</h3>
+							<p>IBU</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</section>

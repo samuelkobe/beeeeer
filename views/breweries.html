@@ -1,0 +1,56 @@
+<script src="scripts/logic.js"></script>
+<script src="scripts/menu.js"></script>
+
+<div ng-controller="BreweryListController" data-ng-init="init()">
+	<header class="main">
+		<button class="menuBtn">
+			<img src="images/icons/menu_dark.svg" class="nav_icon mobile">
+		</button>
+		<div class="navTitleMobile mobile">
+			<span>Breweries</span>
+		</div>
+		<div class="navDesktop desktop">
+			<div class="logo"></div>
+			<a href="#/breweries" class="selected">Breweries</a>
+			<a href="#/beers">Beers</a>
+		</div>
+
+		<div id="search" class="searchbox">
+			<span class="searchicon" id="close-search"></span>
+			<input ng-model="query" class="unstyled" id="search-input" placeholder="Search">
+		</div>
+	</header>
+
+	<div id="vancouverMap" >
+		<div class="map-container">
+			<ui-gmap-google-map center='map.center' zoom='map.zoom'options='map.options'>
+				<ui-gmap-marker ng-repeat="marker in markers | filter:query"
+					coords="marker.coords" 
+					options="marker.options" 
+					events="marker.events" 
+					idkey="marker.id"
+					click="marker.click"
+					icon="marker.icon">
+			</ui-gmap-google-map>
+		</div>
+		<a id="fab" class="fab-btn btn-next"></a>
+	</div>
+
+	<section id="brewerResults" class="pushBelowHeader">
+		<div class="container">
+			<div class="styled-select">
+				<select ng-model="orderProp">
+					<option value="name">Alphabetical</option>
+					<option value="">Most Beers</option>
+					<option value="">Least Beers</option>
+				</select>
+			</div>
+			<span class="line"></span>
+			<div class="card .col-xs-6 .col-md-4" ng-repeat="brewery in breweries | filter:query | orderBy:orderProp">
+				<a href="#/breweries/{{brewery.id}}">
+					<img src="images/logos/{{brewery.id}}.png" class="brewery-logo">
+				</a>
+			</div>
+		</div>
+	</section>
+</div>

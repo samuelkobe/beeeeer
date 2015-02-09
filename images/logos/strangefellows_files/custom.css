@@ -1,0 +1,675 @@
+/** Custom Style Go Here **/
+
+/* general */
+
+
+/* mobiles view up to 800px */
+@media screen and (max-device-width: 700px) {
+.page-header { 
+	background: url(../img/home-header-bg.jpg) #000 no-repeat center; 
+	background-size: cover;
+	}
+	
+#bgvid { 
+display: none !important; 
+visibility: hidden !important;
+	}
+}
+
+#av-overlay-wrap {
+	opacity: 0.98 !important;
+}
+
+#av-overlay {
+	background: none !important;
+	-webkit-box-shadow: 0 0px 0px rgba(100, 100, 100, 0.3) !important;
+	color: #fff !important;
+	width: 600px !important;
+}
+
+#av_verify {
+	padding: 10px 15px !important;
+	margin: 20px 0 0 0;
+	background: #fff !important;
+	color: #df412b !important;
+	border: none;
+	border-radius: 6px;
+}
+
+.submit label {
+	display: none;
+}
+
+.page-header h1 {
+
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+}
+
+video#bgvid
+{
+	position: absolute; 
+	right: 0; 
+	top: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto; 
+	height: auto; 
+	z-index: -10000;
+	background: url(../img/home-header-bg.jpg) no-repeat;
+	background-size: cover;
+}
+
+body.home #where #map-legend {
+	margin-top: 0 !important;
+	margin-bottom: 65px !important;
+	padding-top: 55px !important;
+}
+
+#map-legend {
+	background: #fff;
+}
+
+#what, #where, #contact {
+	background: #fff;
+}
+
+#contact {
+	margin-bottom: 0 !important;
+	padding-bottom: 120px;
+}
+
+body.home #what #beer-slider .beer-img .beer-social {
+	background-color: #de402a !important;
+}
+
+.navbar-brand {
+	padding: 8px 15px !important;
+}
+
+body.home #what #beers .beer .beer-details {
+	font-size: 16px !important;
+}
+
+body.home #who .who-content .col2 .portrait {
+	margin-bottom: 10px !important;
+}
+
+
+body.home #what #beer-slider .beer-details.left-col strong {
+	margin-right: 4px !important;
+}
+
+body.home #what #beer-slider .beer-details.right-col strong {
+	margin-right: 4px !important;
+}
+
+body.home #what #beer-slider .beer-details.right-col, body.home #what #beer-slider .beer-details.left-col {
+	font-size: 14px !important;
+}
+
+.pair, .availability {
+	font-size: 13px !important;
+}
+
+header.navbar a {
+	font-size: 14px !important;
+}
+
+body.home #why .why-content .signup-wrapper p {
+	font-size: 13px !important;
+}
+
+body.home #where #map-legend .info {
+	font-size: 12px;
+}
+
+body.home #why .why-content .col {
+	padding: 0 40px 0 0;
+	font-size: 15px !important;
+}
+
+img.flourish-bottom {
+	margin-top: 15px;
+}
+
+.who-bottom {
+	color: #fcf5e0;
+}
+
+
+
+body.home #who .who-content h2 {
+	margin-bottom: 20px !important;
+}
+
+body.home #what #beer-slider .beer-description {
+	font-size: 14px !important;
+	line-height: 22px !important;
+}
+
+.pair, .availability {
+	font-size: 14px !important;
+	line-height: 18px;
+	font-style: normal !important;
+}
+
+body.home #why .why-content .col {
+	font-size: 16px !important;
+}
+
+body.home #why .why-content .signup-wrapper p {
+	font-size: 14px !important;
+}
+
+body.home #why .why-content .signup-wrapper h4 {
+	font-size: 15px !important;
+}
+
+body.home #who header .caption {
+	font-size: 18px !important;
+}
+
+body.home #who .who-content .info {
+	font-size: 17px !important;
+}
+
+body.home #who .who-content .dash {
+	background-image: none !important;
+}
+
+body.home #who .who-content .and {
+	margin-top: 80px !important;
+}
+
+body.home #who header h2 {
+	margin-bottom: 25px;
+}
+
+body.home #who header {
+	text-align: left !important;
+}
+
+
+div#beers.clearfix
+{
+	background: url(../img/beers-bg.gif) top left repeat !important;
+}
+
+
+
+/* fldtrace edits */
+
+h1, h2, h3, h4, h5, h6 {
+font-family: "rooney-web", serif;
+}
+
+/*********** FRONT PAGE ***********/
+body.home #what #beer-slider .beer-details.left-col {
+	text-align: left;
+}
+body.home #what #beer-slider .beer-details.right-col {
+	padding-left: 0;
+	text-align: left;
+}
+
+/*********** BLOG **************/
+
+/* blog header */
+header.navbar a.back-home {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+header.navbar-blog {
+	text-align: center;
+	padding: 40px 20px 30px;
+	height: auto;
+}
+
+a.blog-logo img {
+	width: 200px;
+}
+
+header.navbar a:not(.navbar-brand):hover:after {
+	background: none;
+}
+
+/* blog content */
+.post-meta, .post-meta a {
+	font-size: 14px;
+	color: #67635a;
+	-webkit-font-smoothing: antialiased;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+.post-meta a {
+	text-decoration: underline;
+}
+
+.single .sidebar {
+	display: none;
+}
+
+.widget {
+	margin-bottom: 35px;
+}
+
+.blog article header .feat-img-link .feat-overlay {
+	text-align: center;
+}
+
+/* sidebar */
+
+.sidebar h3 {
+  font-size: 14px;
+  color: #85898c;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.sidebar .widget_categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar .widget_categories ul li {
+  margin: 10px 0;
+  color: #f05f37;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.sidebar .widget_categories ul li a {
+  letter-spacing: 0;
+}
+.sidebar .widget_categories ul li a:hover {
+  color: #f05f37;
+}
+
+/* styles from category12 blog template */
+.blog hr,
+.search hr,
+.archive hr,
+.category hr,
+.error404 hr {
+  border-color: #f0f0f0;
+  margin: 40px 0 50px;
+}
+.blog #mailchimp-cta,
+.search #mailchimp-cta,
+.archive #mailchimp-cta,
+.category #mailchimp-cta,
+.error404 #mailchimp-cta {
+  text-align: center;
+  padding-top: 50px;
+}
+.blog #mailchimp-cta h2,
+.search #mailchimp-cta h2,
+.archive #mailchimp-cta h2,
+.category #mailchimp-cta h2,
+.error404 #mailchimp-cta h2 {
+  font-family: "grad", serif;
+  font-style: italic;
+  font-size: 24px;
+  color: #85898c;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  margin: 0 0 25px;
+}
+.blog #mailchimp-cta .btn-primary,
+.search #mailchimp-cta .btn-primary,
+.archive #mailchimp-cta .btn-primary,
+.category #mailchimp-cta .btn-primary,
+.error404 #mailchimp-cta .btn-primary {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  width: 165px;
+  height: 46px;
+  border-color: #f05f37;
+  padding: 13px 0;
+  position: relative;
+  top: -5px;
+  margin-left: 20px;
+  -webkit-filter: drop-shadow(0 1px 1px #43484c);
+  -moz-filter: drop-shadow(0 1px 1px #43484c);
+  -ms-filter: drop-shadow(0 1px 1px #43484c);
+  filter: drop-shadow(0 1px 1px #43484c);
+}
+.blog #mailchimp-cta .btn-primary:hover,
+.search #mailchimp-cta .btn-primary:hover,
+.archive #mailchimp-cta .btn-primary:hover,
+.category #mailchimp-cta .btn-primary:hover,
+.error404 #mailchimp-cta .btn-primary:hover {
+  background: #f05f37;
+  border-color: #f05f37;
+}
+.blog #mailchimp-cta .btn-primary img,
+.search #mailchimp-cta .btn-primary img,
+.archive #mailchimp-cta .btn-primary img,
+.category #mailchimp-cta .btn-primary img,
+.error404 #mailchimp-cta .btn-primary img {
+  position: relative;
+  top: -2px;
+  margin-left: 5px;
+}
+.blog #mailchimp-cta hr,
+.search #mailchimp-cta hr,
+.archive #mailchimp-cta hr,
+.category #mailchimp-cta hr,
+.error404 #mailchimp-cta hr {
+  margin-top: 15px;
+}
+.blog .page-header,
+.search .page-header,
+.archive .page-header,
+.category .page-header,
+.error404 .page-header {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  padding: 0;
+  border: none;
+}
+.blog .page-header h1,
+.search .page-header h1,
+.archive .page-header h1,
+.category .page-header h1,
+.error404 .page-header h1 {
+  font-size: 21px;
+  color: #85898c;
+  margin: 0;
+}
+.blog article,
+.search article,
+.archive article,
+.category article,
+.error404 article {
+  margin-bottom: 60px;
+}
+.blog article .asterisk,
+.search article .asterisk,
+.archive article .asterisk,
+.category article .asterisk,
+.error404 article .asterisk {
+  text-align: right;
+}
+.blog article .asterisk img,
+.search article .asterisk img,
+.archive article .asterisk img,
+.category article .asterisk img,
+.error404 article .asterisk img {
+  vertical-align: top;
+}
+.blog article h3.no-results,
+.search article h3.no-results,
+.archive article h3.no-results,
+.category article h3.no-results,
+.error404 article h3.no-results {
+  margin-top: 0;
+}
+.blog article header .feat-img-link,
+.search article header .feat-img-link,
+.archive article header .feat-img-link,
+.category article header .feat-img-link,
+.error404 article header .feat-img-link {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+}
+.blog article header .feat-img-link img,
+.search article header .feat-img-link img,
+.archive article header .feat-img-link img,
+.category article header .feat-img-link img,
+.error404 article header .feat-img-link img {
+  width: 100%;
+  vertical-align: middle;
+  position: relative;
+}
+.blog article header .feat-img-link .feat-overlay,
+.search article header .feat-img-link .feat-overlay,
+.archive article header .feat-img-link .feat-overlay,
+.category article header .feat-img-link .feat-overlay,
+.error404 article header .feat-img-link .feat-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.blog article header .feat-img-link .feat-overlay h4,
+.search article header .feat-img-link .feat-overlay h4,
+.archive article header .feat-img-link .feat-overlay h4,
+.category article header .feat-img-link .feat-overlay h4,
+.error404 article header .feat-img-link .feat-overlay h4 {
+  font-size: 21px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 25px;
+  width: 122px;
+}
+.blog article header .feat-img-link:hover .feat-overlay,
+.search article header .feat-img-link:hover .feat-overlay,
+.archive article header .feat-img-link:hover .feat-overlay,
+.category article header .feat-img-link:hover .feat-overlay,
+.error404 article header .feat-img-link:hover .feat-overlay {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  background: #f05f37;
+  background: rgba(222, 64, 42, 0.7);
+}
+.blog article header .entry-title,
+.search article header .entry-title,
+.archive article header .entry-title,
+.category article header .entry-title,
+.error404 article header .entry-title {
+  margin: 0;
+}
+.blog article header .entry-title a,
+.search article header .entry-title a,
+.archive article header .entry-title a,
+.category article header .entry-title a,
+.error404 article header .entry-title a {
+  font-size: 21px;
+  color: #1e2226;
+  font-weight: 600;
+  -webkit-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.blog article header .entry-title a:hover,
+.search article header .entry-title a:hover,
+.archive article header .entry-title a:hover,
+.category article header .entry-title a:hover,
+.error404 article header .entry-title a:hover,
+.blog article header .entry-title a:focus,
+.search article header .entry-title a:focus,
+.archive article header .entry-title a:focus,
+.category article header .entry-title a:focus,
+.error404 article header .entry-title a:focus {
+  color: #f05f37;
+  text-decoration: none;
+}
+.blog article .entry-summary,
+.search article .entry-summary,
+.archive article .entry-summary,
+.category article .entry-summary,
+.error404 article .entry-summary {
+  line-height: 22px;
+}
+
+.blog article .entry-summary .btn:hover,
+.search article .entry-summary .btn:hover,
+.archive article .entry-summary .btn:hover,
+.category article .entry-summary .btn:hover,
+.error404 article .entry-summary .btn:hover {
+  color: #fff;
+  background: #f05f37;
+}
+.blog nav.post-nav,
+.search nav.post-nav,
+.archive nav.post-nav,
+.category nav.post-nav,
+.error404 nav.post-nav {
+  display: none;
+}
+.blog #infscr-loading,
+.search #infscr-loading,
+.archive #infscr-loading,
+.category #infscr-loading,
+.error404 #infscr-loading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.blog #infscr-loading h5,
+.search #infscr-loading h5,
+.archive #infscr-loading h5,
+.category #infscr-loading h5,
+.error404 #infscr-loading h5 {
+  text-transform: uppercase;
+  color: #85898c;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.single article header {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+.single article header .entry-title {
+  color: #1e2226;
+  font-size: 35px;
+  line-height: 1;
+  margin: 0;
+}
+.single article .feat-img {
+  margin-bottom: 45px;
+  width: 100%;
+}
+.single article .entry-content {
+  line-height: 22px;
+}
+.single article .single-back {
+  text-align: center;
+}
+.single article .single-back .popover {
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 1;
+  border: none;
+  background: #000;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  top: -2px !important;
+  left: -50px !important;
+}
+.single article .single-back .popover .popover-content {
+  padding: 8px 14px 7px;
+}
+.single article .single-back .popover .arrow {
+  border-width: 6px;
+  border-left-color: #000;
+  border-left-color: #000000;
+  margin-top: -6px;
+  top: 50% !important;
+}
+.single article .single-back .popover .arrow:after {
+  border: none;
+}
+.single article .post-content a:hover {
+  color: #f05f37;
+}
+.single article hr {
+  margin-top: 45px;
+  border-color: #f0f0f0;
+}
+.single article footer {
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+.single article footer #twitter,
+.single article footer #facebook {
+  display: inline-block;
+}
+.single article footer #twitter iframe {
+  width: 80px !important;
+}
+.single article footer #facebook {
+  position: relative;
+  top: -5px;
+}
+.error404 .main h1 {
+  color: #1e2226;
+  font-size: 35px;
+  line-height: 1;
+  margin: 0;
+}
+.error404 .main img {
+  width: 100%;
+  margin-bottom: 20px;
+}
